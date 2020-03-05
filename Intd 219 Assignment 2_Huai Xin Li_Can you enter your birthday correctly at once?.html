@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="This is a age calculator">
+    </head>
+   <body style="background-color:pink">
+     
+
+
+     <h1>Please Enter Your Date of Birth <strong><i>ONCE</i></strong></h1>
+
+
+        <p1>Enter Birth Date (in MM/DD/YYYY format)</p1>
+    <div class= "monthNumber">
+     <span class: "monthNumber1" id="monthNumber1">0</span>
+      <span class: "monthNumber1" id="monthNumber2">0</span>
+     </div>
+     
+      <div class= "dayNumber">
+       <span class: "dayNumber" id="dayNumber1" >0</span>
+       <span class: "dayNumber" id="dayNumber2" >0</span>
+     </div>
+     
+      <div class= "yearNumber">
+       <span class: "yearNumber" id="yearNumber1" >0</span>
+       <span class: "yearNumber" id="yearNumber2" >0</span>
+       <span class: "yearNumber" id="yearNumber3" >0</span>
+       <span class: "yearNumber" id="yearNumber4" >0</span>
+     </div>
+     
+      <div>
+      <button class="findBday findBday1" type= "button" onclick="refresh()">Confirm</button>
+      </div> 
+   
+
+    <div class="center"> 
+       <div id="image">
+         
+      <button class="buttons" type = "button" id="button1" onclick="clickonButton1()">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp96m-e51dac16-2ab2-4e07-bb92-7f6342348b92.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk2bS1lNTFkYWMxNi0yYWIyLTRlMDctYmI5Mi03ZjYzNDIzNDhiOTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.syzUST50svRtUT5o1wEJtaMdMk5fwCl85mvx9rCM8xo" width="100%" height="100%">
+      </button>
+     
+      <button class="buttons" type = "button" id="button2" onclick="clickonButton2()">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp96j-6301bd47-4b97-4a1a-bd61-0813eca4a0a1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk2ai02MzAxYmQ0Ny00Yjk3LTRhMWEtYmQ2MS0wODEzZWNhNGEwYTEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.hCDs-rNTBmSKNoOMDXcm5gUZ-t8HjO5gV8LNGKwORYI" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button"  id="button3" id="button2" onclick="clickonButton3()" > 
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp96d-96c9ad3f-9162-43d8-9e6e-bac0cd752d57.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk2ZC05NmM5YWQzZi05MTYyLTQzZDgtOWU2ZS1iYWMwY2Q3NTJkNTcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OyLIc6ci1j1NYvq4hZ0-nfz_z7pqEp1-Xzwzf9DsPBk" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button"id="button4" onclick="clickonButton4()" >
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp968-bb800bbf-760d-41e4-94fd-902463cac3a9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk2OC1iYjgwMGJiZi03NjBkLTQxZTQtOTRmZC05MDI0NjNjYWMzYTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wj_Cy16VE914TM0YKnBjY2bwwWy6suDKw9qlSXC82ZE" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button" id="button5" onclick="clickonButton5()">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp963-220a150e-0e90-416b-bd85-756d25a191a9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk2My0yMjBhMTUwZS0wZTkwLTQxNmItYmQ4NS03NTZkMjVhMTkxYTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.L0CXRCbmGiEgfC0nZ5KRnJ2TQHHCYtwjdecIEXxIN3s" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button" id="button6" onclick="clickonButton6()">  
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp957-28472778-38b8-4cd3-b1da-34f61e391c5f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1Ny0yODQ3Mjc3OC0zOGI4LTRjZDMtYjFkYS0zNGY2MWUzOTFjNWYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.e3AC8Yn7kDGO885mUUvCGTg3Ttv-0EwEsIavXH86CJg" width="100%" height="100%">
+      </button>
+      
+       <button class="buttons" type = "buttonn"id="button7" onclick="clickonButton7()">
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp95v-32341050-9bd4-4b90-a0c4-1c64079013fd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1di0zMjM0MTA1MC05YmQ0LTRiOTAtYTBjNC0xYzY0MDc5MDEzZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dEu9S_RF1RkOmy4pHbcpqF8RB2jxWOfG3mBLuPtZ9io" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button" id="button8" onclick="clickonButton8()">
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp95o-628eb35a-8154-4221-a072-db6d2f9a74d3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1by02MjhlYjM1YS04MTU0LTQyMjEtYTA3Mi1kYjZkMmY5YTc0ZDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eTqIZ3N0VaXzl_tqX59bIwb65TolLvEmUtzs44VlGTs" width="100%" height="100%">
+      </button>
+     
+       <button class="buttons" type = "button"id="button8" onclick="clickonButton9()" >
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp95j-cd7dac9f-24b2-4a6b-a246-f35cb7cdf62b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1ai1jZDdkYWM5Zi0yNGIyLTRhNmItYTI0Ni1mMzVjYjdjZGY2MmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lTlVrIEy_8Zrs-PX-7k9h_xrlzVeCja8MKa-D-yJ2n0" width="100%" height="100%">
+       </button>
+     
+       <button class="buttons" type = "button"id="button11" onclick="clickonButton10()">
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp95f-e1151b5b-ac3c-426f-82cf-a207ef2eac28.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1Zi1lMTE1MWI1Yi1hYzNjLTQyNmYtODJjZi1hMjA3ZWYyZWFjMjgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Fl-jtiGbuAKWpO5lQQ9a-kzaeEq2ZfO_ZPcUDS_5yBk" width="100%" height="100%">
+         </button>
+     
+       <button class="buttons" type = "button" id="button11" onclick="clickonButton11()">
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp95b-7d5a4014-12be-454e-89f3-42a6a2cda44c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDk1Yi03ZDVhNDAxNC0xMmJlLTQ1NGUtODlmMy00MmE2YTJjZGE0NGMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZpNDMN5PpstdSqfFNL5QScYdnpTaxd7l4fHnSlhc0Iw" width="100%" height="100%">
+       </button>
+     
+       <button class="buttons" type = "button" id="button12" onclick="clickonButton12()">
+       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/afe3e0ce-09b2-4b63-b800-0307f5a81620/ddrp9vl-8f63d287-bbfa-4e3e-8949-c1d89f27e3ee.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FmZTNlMGNlLTA5YjItNGI2My1iODAwLTAzMDdmNWE4MTYyMFwvZGRycDl2bC04ZjYzZDI4Ny1iYmZhLTRlM2UtODk0OS1jMWQ4OWYyN2UzZWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aU-hMHmRyZko6WBDAkuJeQaByYDI71Fr-YX3iOchEYo" width="100%" height="100%">
+       </button>
+         </div>
+     </div>
+  </body>
+</html>
+
+
+
+<style>
+  body{
+  width:100%;
+  height:100%;
+}
+
+
+h1{
+position: absolute;
+display: block;
+text-align: center;
+font-size: 35px;
+font-family: tahoma;
+top: 5%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+p1{
+position: absolute;
+display: block;
+font-size: 20px;
+font-family: tahoma;
+word-spacing:2px;
+text-align: center;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+.findBday1{
+  position: absolute;
+  display: block;
+  border-radius: 12px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family:tahoma;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.findBday1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+
+.findBday1:hover{
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.monthNumber{
+position: absolute;
+display: inline-block;
+font-size: 50px;
+font-family: tahoma;
+text-align: center;
+top: 32%;
+left: 42%;
+word-spacing:-10px;
+transform: translate(-50%, -50%);
+}
+
+.dayNumber{
+position: absolute;
+display: inline-block;
+font-size: 50px;
+font-family: tahoma;
+text-align: center;
+top: 32%;
+left: 48%;
+word-spacing:-10px;
+transform: translate(-50%, -50%);
+}
+
+.yearNumber{
+position: absolute;
+display: inline-block;
+font-size: 50px;
+font-family: tahoma;
+text-align: center;
+top: 32%;
+left: 56%;
+word-spacing:-10px;
+transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.center{
+  position: absolute;
+  top: 75%;
+  left:51%;
+  transform: translate(-50%, -50%);
+}
+
+
+.buttons{
+  border-radius: 50%;
+  border: none;
+  display: inline block;
+  width: 64px;
+  height: 64px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+
+
+#image{
+  display: inline-block;
+  margin-left: 22%;
+  margin-right: 22%; 
+}
+
+</style>
+
+
+
+<script>
+  var value=0
+
+//when user click on the buttons, get the random number in this value for month
+
+//#2
+function clickonButton2(){
+document.getElementById("monthNumber2").innerHTML = getRandomInt2(); 
+}
+
+
+function getRandomInt2(){
+  min = Math.ceil(0);
+  max = Math.floor(2);
+  return Math.floor(Math.random()* (max -min)) + min;
+}
+
+
+//#11
+function clickonButton11(){
+document.getElementById("monthNumber1").innerHTML = getRandomInt11(); 
+}
+
+
+function getRandomInt11(){
+  min = Math.ceil(5);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+}
+
+
+function clickonButton6(){
+document.getElementById("monthNumber1").innerHTML = getRandomInt6(); 
+}
+
+//#6
+function getRandomInt6(){
+  min = Math.ceil(0);
+  max = Math.floor(3);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+//#9
+function clickonButton9(){
+document.getElementById("monthNumber2").innerHTML = getRandomInt9(); 
+}
+
+
+function getRandomInt9(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+//when user click on the buttons, get number for day
+//#5
+function clickonButton5(){
+document.getElementById("dayNumber1").innerHTML = getRandomInt5(); 
+}
+
+
+function getRandomInt5(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+//#8
+function clickonButton8(){
+document.getElementById("dayNumber1").innerHTML = getRandomInt8(); 
+}
+
+
+function getRandomInt8(){
+  min = Math.ceil(3);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+//#10
+function clickonButton10(){
+document.getElementById("dayNumber2").innerHTML = getRandomInt10(); 
+}
+
+
+function getRandomInt10(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+
+//when clicking buttons, year return in this value
+//#12
+function clickonButton12(){
+document.getElementById("yearNumber1").innerHTML = getRandomInt12(); 
+}
+
+
+function getRandomInt12(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+
+
+function clickonButton7(){
+document.getElementById("yearNumber4").innerHTML = getRandomInt7(); 
+}
+
+//#7
+function getRandomInt7(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+} 
+
+//#1
+function clickonButton1(){
+document.getElementById("yearNumber3").innerHTML = getRandomInt1(); 
+}
+
+
+function getRandomInt1(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+}
+
+//#4
+function clickonButton4(){
+document.getElementById("yearNumber2").innerHTML = getRandomInt4(); 
+}
+
+
+function getRandomInt4(){
+  min = Math.ceil(0);
+  max = Math.floor(10);
+  return Math.floor(Math.random()* (max -min)) + min;
+}
+
+
+//#3
+function clickonButton3(){
+document.getElementById("yearNumber4").innerHTML = getRandomInt3(); 
+}
+
+
+function getRandomInt3(){
+  min = Math.ceil(2);
+  max = Math.floor(7);
+  return Math.floor(Math.random()* (max -min)) + min;
+}
+
+//refresh all enter numbers to the value 0
+function refresh(){
+document.getElementById("monthNumber1").innerHTML = value; 
+document.getElementById("monthNumber2").innerHTML = value; 
+document.getElementById("dayNumber1").innerHTML = value; 
+document.getElementById("dayNumber2").innerHTML = value; 
+document.getElementById("yearNumber1").innerHTML = value; 
+document.getElementById("yearNumber2").innerHTML = value; 
+document.getElementById("yearNumber3").innerHTML = value; 
+document.getElementById("yearNumber4").innerHTML = value; 
+}
+</script>
